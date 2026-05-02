@@ -1,3 +1,5 @@
+# Ironman Triathlon Training 2027
+
 ## 🏊‍♂️ Ironman Canada (Ottawa) 2027: Predictive Performance Dashboard
 **Project Status:** Active Training & Data Collection  
 **Target Race:** August 2027 (Ottawa, ON)
@@ -12,7 +14,7 @@ This repository contains the data architecture and predictive modeling used to m
 [![Training Phase](https://img.shields.io/badge/Phase-Base_Building-green)](https://docs.google.com/spreadsheets/d/e/2PACX-1vQhvv6U_CWuFcBQ8GLoYYLF6boAIvNBVmKnpBUM7wO_vtJMa0n8neGutcjzo35-abb9mySHM48bE_PL/pubhtml?gid=1634695898&single=true)
 
 
-### ⏱️ Race-Day Projections (Dynamic)
+### ⏱️ Race-Day Projections
 The following table represents the core predictive logic of the dashboard. It calculates my estimated finish time for **Ironman Canada (Ottawa)** by aggregating current training paces across all three disciplines.
 
 | Discipline | Distance | Target Pace/Power | Predicted Split |
