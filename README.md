@@ -1,3 +1,20 @@
+# 🏊‍♂️ Ironman Canada (Ottawa) 2027: Predictive Performance Dashboard
+**Target Race:** August 2027 (Ottawa, ON)
+
+### 📊 Training Status (Live)
+---
+
+### ⏱️ Race-Day Projections (Dynamic)
+---
+
+### 📋 Project Overview
+This repository contains the data architecture and predictive modeling used to manage my journey toward completing the **Ironman Canada 140.6**. 
+
+**[Link to Google Sheets Training Dashboard](https://docs.google.com/spreadsheets/d/1lPLLLyabq1FIgv9QlJgcaRqtcBulhBTVE7C0FU1eAIE/edit?usp=sharing)**
+
+
+---
+
 # Ironman Triathlon Training 2027
 
 ## 🏊‍♂️ Ironman Canada (Ottawa) 2027: Predictive Performance Dashboard
