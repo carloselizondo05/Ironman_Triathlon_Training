@@ -11,6 +11,19 @@ This repository contains the data architecture and predictive modeling used to m
 [![Current Miles](https://img.shields.io/badge/Total_Run_Miles-4.0-orange)](https://docs.google.com/spreadsheets/d/e/2PACX-1vQhvv6U_CWuFcBQ8GLoYYLF6boAIvNBVmKnpBUM7wO_vtJMa0n8neGutcjzo35-abb9mySHM48bE_PL/pubhtml?gid=1634695898&single=true)
 [![Training Phase](https://img.shields.io/badge/Phase-Base_Building-green)](https://docs.google.com/spreadsheets/d/e/2PACX-1vQhvv6U_CWuFcBQ8GLoYYLF6boAIvNBVmKnpBUM7wO_vtJMa0n8neGutcjzo35-abb9mySHM48bE_PL/pubhtml?gid=1634695898&single=true)
 
+
+### ⏱️ Race-Day Projections (Dynamic)
+The following table represents the core predictive logic of the dashboard. It calculates my estimated finish time for **Ironman Canada (Ottawa)** by aggregating current training paces across all three disciplines.
+
+| Discipline | Distance | Target Pace/Power | Predicted Split |
+| :--- | :--- | :--- | :--- |
+| **Swim** | 3.8 km | 2:10 / 100m | 1:22:20 |
+| **Bike** | 180 km | 185 Watts | 6:15:00 |
+| **Run** | 42.2 km | 6:15 / km | 4:23:45 |
+| **Transitions** | — | — | 0:25:00 |
+| **Total Project Finish** | **140.6 Miles** | — | **12:26:05** |
+
+> *Note: These figures update automatically as my cardiovascular efficiency (Heart Rate vs. Power) improves during the 2026/2027 build phases.*
 ---
 
 ### 📊 Key Analytics & Predictive Features
