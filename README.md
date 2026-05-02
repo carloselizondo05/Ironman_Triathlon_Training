@@ -4,7 +4,6 @@
 **Project Status:** Active Training & Data Collection  
 **Tools:** Google Sheets · ARRAYFORMULA · VLOOKUP · Custom Time-Conversion Scripts
 
-[![Current Miles](https://img.shields.io/badge/Total_Run_Miles-4.0-orange)](https://docs.google.com/spreadsheets/d/e/2PACX-1vQhvv6U_CWuFcBQ8GLoYYLF6boAIvNBVmKnpBUM7wO_vtJMa0n8neGutcjzo35-abb9mySHM48bE_PL/pubhtml?gid=1634695898&single=true)
 [![Training Phase](https://img.shields.io/badge/Phase-Base_Building-green)](https://docs.google.com/spreadsheets/d/e/2PACX-1vQhvv6U_CWuFcBQ8GLoYYLF6boAIvNBVmKnpBUM7wO_vtJMa0n8neGutcjzo35-abb9mySHM48bE_PL/pubhtml?gid=1634695898&single=true)
 
 > **[View the Live Google Sheets Training Dashboard →](https://docs.google.com/spreadsheets/d/1lPLLLyabq1FIgv9QlJgcaRqtcBulhBTVE7C0FU1eAIE/edit?usp=sharing)**
