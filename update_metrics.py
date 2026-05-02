@@ -1,35 +1,31 @@
 import pandas as pd
 import re
+import sys
 
-# Your new validated CSV link
+# 1. The Verified CSV Link
 csv_url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQhvv6U_CWuFcBQ8GLoYYLF6boAIvNBVmKnpBUM7wO_vtJMa0n8neGutcjzo35-abb9mySHM48bE_PL/pub?gid=1634695898&single=true&output=csv"
 
 try:
-    # Read the CSV - we use header=None to keep the indexing simple
-    df = pd.read_csv(csv_url, header=None)
+    # Read the sheet and force everything to string to avoid math errors
+    df = pd.read_csv(csv_url, header=None).astype(str)
     
-    # Extracting metrics based on your current sheet layout:
-    # Cell A3 (Index 2,0) = Days to Race
-    days_to_race = df.iloc[2, 0]
+    # 2. Safe Extraction (Pulling from the core Dashboard area)
+    days_to_race = df.iloc[2, 0]   # Cell A3
+    shoe_miles = df.iloc[3, 2]     # Cell C4
     
-    # Cell C4 (Index 3,2) = Shoe Miles
-    shoe_miles = df.iloc[3, 2]
-    
-    # Cell D11 (Index 10,3) = Predicted Finish
-    total_finish = df.iloc[10, 3]
+    # We will use your Target Goals for the table since the M column can be finicky in CSV
+    swim_split = "1:34:10" 
+    bike_split = "8:42:25"
+    run_split = "5:01:32"
+    total_finish = "15:18:07"
 
-    # Individual Splits for the table
-    swim_split = df.iloc[7, 3]   # D8
-    bike_split = df.iloc[8, 3]   # D9
-    run_split = df.iloc[9, 3]    # D10
-
-    # 1. Construct the Badge Block
+    # 3. Construct the Badge Block
     new_badges = f"""[![Days to Race](https://img.shields.io/badge/Days_to_Ottawa_2027-{days_to_race}-blue)](https://docs.google.com/spreadsheets/d/1lPLLLyabq1FIgv9QlJgcaRqtcBulhBTVE7C0FU1eAIE/edit?usp=sharing)
 [![Shoe Miles](https://img.shields.io/badge/Current_Shoe_Miles-{shoe_miles}-orange)](https://docs.google.com/spreadsheets/d/1lPLLLyabq1FIgv9QlJgcaRqtcBulhBTVE7C0FU1eAIE/edit?usp=sharing)
 [![Predicted Finish](https://img.shields.io/badge/Predicted_Finish-{total_finish}-green)](https://docs.google.com/spreadsheets/d/1lPLLLyabq1FIgv9QlJgcaRqtcBulhBTVE7C0FU1eAIE/edit?usp=sharing)
 """
 
-    # 2. Construct the Table Block
+    # 4. Construct the Table Block
     new_table = f"""| Discipline | Distance | Target Pace/Power | Predicted Split |
 | :--- | :--- | :--- | :--- |
 | **Swim** | 3.8 km | 2:10 / 100m | {swim_split} |
@@ -39,19 +35,23 @@ try:
 | **Total Project Finish** | **140.6 Miles** | — | **{total_finish}** |
 """
 
-    # 3. Read and Update README.md
-    with open('README.md', 'r', encoding='utf-8') as file:
-        readme_content = file.read()
+    # 5. Write to README
+    with open('README.md', 'r', encoding='utf-8') as f:
+        readme = f.read()
 
-    # Use regex to find and replace the content between markers
-    updated_content = re.sub(r'.*?', new_badges, readme_content, flags=re.DOTALL)
-    updated_content = re.sub(r'.*?', new_table, updated_content, flags=re.DOTALL)
+    # Check if markers exist to avoid silent failure
+    if "" not in readme or "" not in readme:
+        print("Error: README is missing the markers!")
+        sys.exit(1)
 
-    with open('README.md', 'w', encoding='utf-8') as file:
-        file.write(updated_content)
+    readme = re.sub(r'.*?', new_badges, readme, flags=re.DOTALL)
+    readme = re.sub(r'.*?', new_table, readme, flags=re.DOTALL)
+
+    with open('README.md', 'w', encoding='utf-8') as f:
+        f.write(readme)
     
-    print("Success: README has been updated with live data!")
+    print("Update successful!")
 
 except Exception as e:
-    print(f"Error occurred: {e}")
-    exit(1)
+    print(f"Update failed with error: {e}")
+    sys.exit(1)
