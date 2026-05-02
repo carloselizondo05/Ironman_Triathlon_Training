@@ -4,6 +4,8 @@
 **Project Status:** Active Training & Data Collection  
 **Tools:** Google Sheets · ARRAYFORMULA · VLOOKUP · Custom Time-Conversion Scripts
 
+[![Shoe Miles](https://img.shields.io/badge/Shoe_Miles-71.04-orange)](https://docs.google.com/spreadsheets/d/e/2PACX-1vQhvv6U_CWuFcBQ8GLoYYLF6boAIvNBVmKnpBUM7wO_vtJMa0n8neGutcjzo35-abb9mySHM48bE_PL/pubhtml?gid=1634695898&single=true)
+[![Days to Race](https://img.shields.io/badge/Days_to_Race-485-blue)](https://docs.google.com/spreadsheets/d/e/2PACX-1vQhvv6U_CWuFcBQ8GLoYYLF6boAIvNBVmKnpBUM7wO_vtJMa0n8neGutcjzo35-abb9mySHM48bE_PL/pubhtml?gid=1634695898&single=true)
 [![Training Phase](https://img.shields.io/badge/Phase-Base_Building-green)](https://docs.google.com/spreadsheets/d/e/2PACX-1vQhvv6U_CWuFcBQ8GLoYYLF6boAIvNBVmKnpBUM7wO_vtJMa0n8neGutcjzo35-abb9mySHM48bE_PL/pubhtml?gid=1634695898&single=true)
 
 > **[View the Live Google Sheets Training Dashboard →](https://docs.google.com/spreadsheets/d/1lPLLLyabq1FIgv9QlJgcaRqtcBulhBTVE7C0FU1eAIE/edit?usp=sharing)**
@@ -22,13 +24,13 @@ The model treats race-day performance as a data problem: current training paces 
 
 *Live figures are tracked in the Google Sheets dashboard linked above. The table below reflects current projections as of last update.*
 
-| Discipline | Distance | Target Pace / Power | Projected Split |
-| :--- | :--- | :--- | :--- |
-| **Swim** | 3.8 km | 2:10 / 100m | 1:22:20 |
-| **Bike** | 180 km | 185 Watts | 6:15:00 |
-| **Run** | 42.2 km | 6:15 / km | 4:23:45 |
-| **Transitions** | — | — | 0:25:00 |
-| **Projected Finish** | **140.6 Miles** | — | **12:26:05** |
+| Discipline | Distance | Target Pace / Power | Expected Finish | Recent 10 Avg |
+| :--- | :--- | :--- | :--- | :--- |
+| **Swim** | 3.8 km | 2:10 / 100m | 1:34:10 | 1:35:30 |
+| **Bike** | 112 mi | 185 Watts | 8:42:25 | 8:31:30 |
+| **Run** | 26.2 mi | 6:15 / km | 5:01:32 | 5:06:59 |
+| **Transitions** | — | — | — | — |
+| **Projected Finish** | **140.6 Miles** | — | **15:18:07** | **15:13:59** |
 
 ---
 
